@@ -326,32 +326,6 @@ export default function MePage() {
         </div>
       </div>
 
-      {/* Public URL */}
-      <div className="card" style={{ marginBottom: "1.5rem" }}>
-        <div className="toggle-wrap">
-          <span className="toggle-label">
-            {profile.is_public ? "🌐 公開中" : "🔒 非公開"}
-          </span>
-          <label className="toggle">
-            <input
-              type="checkbox"
-              checked={profile.is_public}
-              onChange={togglePublic}
-            />
-            <span className="toggle-track" />
-            <span className="toggle-thumb" />
-          </label>
-        </div>
-        <div className="url-box">
-          <span className="url-text">
-            {siteUrl}/u/{profile.handle}
-          </span>
-          <button className="btn btn-primary url-copy" onClick={copyUrl}>
-            コピー
-          </button>
-        </div>
-      </div>
-
       {/* My 5 */}
       <div className="section-header">
         <span className="section-title">My 5</span>
@@ -408,6 +382,32 @@ export default function MePage() {
             </div>
           );
         })}
+      </div>
+
+      {/* Public URL */}
+      <div className="card" style={{ marginTop: "1.5rem" }}>
+        <div className="toggle-wrap">
+          <span className="toggle-label">
+            {profile.is_public ? "🌐 公開中" : "🔒 非公開"}
+          </span>
+          <label className="toggle">
+            <input
+              type="checkbox"
+              checked={profile.is_public}
+              onChange={togglePublic}
+            />
+            <span className="toggle-track" />
+            <span className="toggle-thumb" />
+          </label>
+        </div>
+        <div className="url-box">
+          <span className="url-text">
+            {siteUrl}/u/{profile.handle}
+          </span>
+          <button className="btn btn-primary url-copy" onClick={copyUrl}>
+            コピー
+          </button>
+        </div>
       </div>
 
       {/* Edit modal */}
