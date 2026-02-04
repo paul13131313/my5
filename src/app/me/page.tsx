@@ -320,16 +320,9 @@ export default function MePage() {
           <span style={{ color: "var(--text-muted)", fontSize: "0.85rem" }}>
             @{profile.handle}
           </span>
-          <button className="btn btn-secondary btn-sm" onClick={logout}>
-            ログアウト
-          </button>
         </div>
       </div>
 
-      {/* My 5 */}
-      <div className="section-header">
-        <span className="section-title">My 5</span>
-      </div>
       <div className="card">
         {[1, 2, 3, 4, 5].map((slot) => {
           const fav = favorites[slot - 1];
@@ -360,6 +353,15 @@ export default function MePage() {
                         onClick={() => swapSlots(slot - 1, slot)}
                       >
                         ↑
+                      </button>
+                    )}
+                    {slot < 5 && favorites[slot] && (
+                      <button
+                        className="icon-btn"
+                        title="下と入れ替え"
+                        onClick={() => swapSlots(slot, slot + 1)}
+                      >
+                        ↓
                       </button>
                     )}
                     <button
@@ -409,6 +411,15 @@ export default function MePage() {
           </button>
         </div>
       </div>
+
+      {/* Logout */}
+      <button
+        className="btn btn-secondary btn-full"
+        style={{ marginTop: "2rem" }}
+        onClick={logout}
+      >
+        ログアウト
+      </button>
 
       {/* Edit modal */}
       {editingSlot && (
