@@ -421,6 +421,9 @@ export default function MePage() {
         <Link href="/analytics" className="analytics-link">
           📊 趣味分析ダッシュボード
         </Link>
+        <Link href="/pricing" className="analytics-link">
+          💎 料金プラン
+        </Link>
       </div>
 
       {/* Logout */}
