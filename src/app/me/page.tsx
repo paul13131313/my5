@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import type { Profile, Favorite } from "@/lib/types";
 
@@ -412,10 +413,15 @@ export default function MePage() {
         </div>
       </div>
 
+      {/* Analytics link */}
+      <Link href="/analytics" className="analytics-link" style={{ marginTop: "1.5rem" }}>
+        📊 趣味分析ダッシュボード
+      </Link>
+
       {/* Logout */}
       <button
         className="btn btn-secondary btn-full"
-        style={{ marginTop: "2rem" }}
+        style={{ marginTop: "1rem" }}
         onClick={logout}
       >
         ログアウト

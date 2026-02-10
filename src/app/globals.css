@@ -416,3 +416,215 @@ html, body {
   margin: 0 auto;
   padding-top: 3rem;
 }
+
+/* ===== Analytics page ===== */
+.analytics-page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  min-height: 100vh;
+}
+
+.analytics-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.analytics-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.analytics-title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+.analytics-subtitle {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+/* Stats row */
+.analytics-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.analytics-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.analytics-stat-card:hover { border-color: var(--accent); }
+.analytics-stat-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.analytics-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Chart grid */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 640px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Chart cards */
+.analytics-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  transition: border-color 0.2s;
+  animation: slideUp 0.3s ease;
+}
+.analytics-card:hover { border-color: #3a3a44; }
+
+.analytics-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.analytics-card-icon {
+  font-size: 1.1rem;
+}
+.analytics-card-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.analytics-chart-wrap {
+  width: 100%;
+  min-height: 280px;
+}
+
+/* Recharts label fix for dark theme */
+.recharts-text { fill: #8a8890 !important; }
+.recharts-label { fill: #8a8890 !important; }
+.recharts-pie-label-text { fill: #8a8890 !important; font-size: 10px; }
+
+/* AI section */
+.analytics-ai-section {
+  margin-top: 1rem;
+}
+.analytics-ai-cta {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.analytics-ai-desc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+.analytics-ai-result {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  animation: fadeIn 0.3s ease;
+}
+.analytics-ai-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text);
+  font-weight: 300;
+}
+
+/* Ranking breakdown */
+.analytics-ranking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 480px) {
+  .analytics-ranking-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.analytics-ranking-cat {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem;
+}
+.analytics-ranking-cat-name {
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+.analytics-ranking-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.analytics-ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+.analytics-ranking-rank {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  color: var(--accent);
+  min-width: 1.2rem;
+}
+.analytics-ranking-title {
+  color: var(--text);
+  font-weight: 400;
+}
+
+/* Nav link in dashboard */
+.analytics-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.analytics-link:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
