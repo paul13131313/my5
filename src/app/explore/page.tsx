@@ -82,7 +82,7 @@ export default function ExplorePage() {
     <div className="explore-page-wrap">
       {/* Top bar */}
       <div className="topbar">
-        <Link href="/me" className="topbar-logo">MY5</Link>
+        <Link href="/me" className="topbar-logo">MY RANKING</Link>
         <div className="topbar-right">
           <span className="analytics-badge">Explore</span>
         </div>

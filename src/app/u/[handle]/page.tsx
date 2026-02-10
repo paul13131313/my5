@@ -18,25 +18,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .eq("handle", handle)
     .single();
 
-  if (!profile) return { title: "Not Found — MY5" };
+  if (!profile) return { title: "Not Found — MY RANKING" };
 
   const displayName = profile.display_name || profile.handle;
   const pageUrl = `${SITE_URL}/u/${profile.handle}`;
 
   return {
-    title: `${displayName} — MY5`,
-    description: `${displayName}のMy 5をチェック`,
+    title: `${displayName} — MY RANKING`,
+    description: `${displayName}のランキングをチェック`,
     openGraph: {
-      title: `${displayName}のMY5`,
-      description: `${displayName}のお気に入りトップ5をチェック！`,
+      title: `${displayName}のMY RANKING`,
+      description: `${displayName}のお気に入りランキングをチェック！`,
       url: pageUrl,
       siteName: "MY RANKING",
       type: "profile",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${displayName}のMY5`,
-      description: `${displayName}のお気に入りトップ5をチェック！`,
+      title: `${displayName}のMY RANKING`,
+      description: `${displayName}のお気に入りランキングをチェック！`,
     },
   };
 }
@@ -59,7 +59,7 @@ export default async function PublicProfilePage({ params }: Props) {
       <div className="page-wrap">
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
           <a href="/" className="topbar-logo" style={{ textDecoration: "none" }}>
-            MY5
+            MY RANKING
           </a>
         </div>
         <div className="private-notice">
@@ -87,7 +87,7 @@ export default async function PublicProfilePage({ params }: Props) {
     <div className="page-wrap">
       <div style={{ textAlign: "center", marginBottom: "2rem" }}>
         <a href="/" className="topbar-logo" style={{ textDecoration: "none" }}>
-          MY5
+          MY RANKING
         </a>
       </div>
 
@@ -127,7 +127,7 @@ export default async function PublicProfilePage({ params }: Props) {
       {/* Share buttons */}
       <ShareButtons
         url={`${SITE_URL}/u/${profile.handle}`}
-        text={`${profile.display_name || profile.handle}のMY5をチェック！`}
+        text={`${profile.display_name || profile.handle}のMY RANKINGをチェック！`}
       />
 
       <div
@@ -142,7 +142,7 @@ export default async function PublicProfilePage({ params }: Props) {
           href="/login"
           style={{ color: "var(--accent)", textDecoration: "none" }}
         >
-          自分のMY5を作る →
+          自分のMY RANKINGを作る →
         </a>
       </div>
     </div>

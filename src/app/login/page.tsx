@@ -16,11 +16,9 @@ export default function LoginPage() {
   return (
     <div className="page-wrap">
       <div className="login-wrap">
-        <div className="logo">MY5</div>
-        <div className="logo-sub">share your top 5</div>
+        <div className="logo">MY RANKING</div>
         <p className="login-desc">
-          あなたを定義する5つのお気に入りを<br />
-          キュレーションして共有しよう。
+          お気に入りのランキングを登録・公開・シェア
         </p>
         <button className="btn btn-primary btn-full" onClick={handleGoogleLogin}>
           <svg className="google-icon" viewBox="0 0 24 24">

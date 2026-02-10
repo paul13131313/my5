@@ -215,7 +215,7 @@ export default function AnalyticsPage() {
       {/* Top bar */}
       <div className="topbar">
         <Link href="/me" className="topbar-logo">
-          MY5
+          MY RANKING
         </Link>
         <div className="topbar-right">
           <span className="analytics-badge">Analytics</span>
@@ -244,7 +244,7 @@ export default function AnalyticsPage() {
         </div>
         <div className="analytics-stat-card">
           <div className="analytics-stat-num">{favorites.length}</div>
-          <div className="analytics-stat-label">MY5登録</div>
+          <div className="analytics-stat-label">登録数</div>
         </div>
       </div>
 

@@ -112,8 +112,7 @@ function HandleSetup({
 
   return (
     <div className="page-wrap">
-      <div className="logo">MY5</div>
-      <div className="logo-sub">share your top 5</div>
+      <div className="logo">MY RANKING</div>
       <div className="setup-wrap">
         <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.3rem", marginBottom: "1.5rem", textAlign: "center" }}>
           プロフィールを設定
@@ -316,7 +315,7 @@ export default function MePage() {
     <div className="page-wrap">
       {/* Top bar */}
       <div className="topbar">
-        <span className="topbar-logo">MY5</span>
+        <span className="topbar-logo">MY RANKING</span>
         <div className="topbar-right">
           <span style={{ color: "var(--text-muted)", fontSize: "0.85rem" }}>
             @{profile.handle}
