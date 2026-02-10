@@ -1,8 +1,14 @@
-import { type NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { updateSession } from "@/lib/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
-  return await updateSession(request);
+  // Only run Supabase session refresh on protected routes
+  if (request.nextUrl.pathname.startsWith("/me")) {
+    return await updateSession(request);
+  }
+
+  // All other routes pass through without Supabase call
+  return NextResponse.next();
 }
 
 export const config = {
