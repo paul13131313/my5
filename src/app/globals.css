@@ -685,3 +685,206 @@ html, body {
   color: var(--accent);
   border-color: var(--accent);
 }
+
+/* ===== Explore page ===== */
+.explore-page-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  min-height: 100vh;
+}
+
+.explore-hero {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.explore-title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+.explore-subtitle {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+/* Search bar */
+.explore-search {
+  margin-bottom: 1.5rem;
+}
+.explore-search-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.explore-search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.explore-search-input:focus { border-color: var(--accent); }
+.explore-search-input::placeholder { color: #555; }
+
+.explore-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+}
+.explore-filter-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+}
+.explore-filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.explore-filter-btn:hover { border-color: #444; color: var(--text); }
+.explore-filter-btn.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Sections */
+.explore-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  animation: slideUp 0.3s ease;
+}
+.explore-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.explore-section-icon { font-size: 1.1rem; }
+.explore-section-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.explore-empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 300;
+  padding: 1.5rem 0;
+}
+
+/* Search results */
+.explore-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.explore-result-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.15s;
+}
+.explore-result-card:hover { border-color: #3a3a44; }
+.explore-result-rank {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--accent);
+  min-width: 2rem;
+  text-align: center;
+}
+.explore-result-content { flex: 1; min-width: 0; }
+.explore-result-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.explore-result-category {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+.explore-result-user {
+  text-align: right;
+  flex-shrink: 0;
+}
+.explore-result-handle {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.explore-result-handle:hover { text-decoration: underline; }
+.explore-result-pos {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+/* Popular items */
+.explore-popular {
+  display: flex;
+  flex-direction: column;
+}
+.explore-popular-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.explore-popular-row:last-child { border-bottom: none; }
+.explore-popular-row:hover { background: var(--bg-card-hover); }
+.explore-popular-rank {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--accent);
+  min-width: 2rem;
+  text-align: center;
+}
+.explore-popular-content { flex: 1; min-width: 0; }
+.explore-popular-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.explore-popular-category {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+.explore-popular-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  flex-shrink: 0;
+}

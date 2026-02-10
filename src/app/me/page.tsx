@@ -413,10 +413,15 @@ export default function MePage() {
         </div>
       </div>
 
-      {/* Analytics link */}
-      <Link href="/analytics" className="analytics-link" style={{ marginTop: "1.5rem" }}>
-        📊 趣味分析ダッシュボード
-      </Link>
+      {/* Nav links */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginTop: "1.5rem" }}>
+        <Link href="/explore" className="analytics-link">
+          🔍 みんなのランキング
+        </Link>
+        <Link href="/analytics" className="analytics-link">
+          📊 趣味分析ダッシュボード
+        </Link>
+      </div>
 
       {/* Logout */}
       <button
