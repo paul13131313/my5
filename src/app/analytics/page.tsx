@@ -502,6 +502,21 @@ export default function AnalyticsPage() {
                       </div>
                     ))}
                 </div>
+                <a
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                    `私の${cat.icon}${cat.name}ランキング！\n${cat.items
+                      .sort((a, b) => a.rank - b.rank)
+                      .slice(0, 3)
+                      .map((item, i) => ['🥇','🥈','🥉'][i] + ' ' + item.title)
+                      .join('\n')}\n\n#MY_RANKING`
+                  )}&url=${encodeURIComponent(API_BASE + '/ogp/' + cat.id)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="share-btn share-btn-x"
+                  style={{ marginTop: "0.5rem", fontSize: "0.7rem" }}
+                >
+                  𝕏 シェア
+                </a>
               </div>
             ))}
           </div>

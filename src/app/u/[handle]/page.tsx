@@ -2,6 +2,10 @@ import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import type { Favorite } from "@/lib/types";
 import type { Metadata } from "next";
+import { ShareButtons } from "./share-buttons";
+
+const API_BASE = "https://my-ranking-api.hiroshinagano0113.workers.dev";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://my5-eight.vercel.app";
 
 type Props = { params: Promise<{ handle: string }> };
 
@@ -15,9 +19,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .single();
 
   if (!profile) return { title: "Not Found — MY5" };
+
+  const displayName = profile.display_name || profile.handle;
+  const pageUrl = `${SITE_URL}/u/${profile.handle}`;
+
   return {
-    title: `${profile.display_name || profile.handle} — MY5`,
-    description: `${profile.display_name || profile.handle}のMy 5をチェック`,
+    title: `${displayName} — MY5`,
+    description: `${displayName}のMy 5をチェック`,
+    openGraph: {
+      title: `${displayName}のMY5`,
+      description: `${displayName}のお気に入りトップ5をチェック！`,
+      url: pageUrl,
+      siteName: "MY RANKING",
+      type: "profile",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${displayName}のMY5`,
+      description: `${displayName}のお気に入りトップ5をチェック！`,
+    },
   };
 }
 
@@ -104,10 +124,16 @@ export default async function PublicProfilePage({ params }: Props) {
         </div>
       )}
 
+      {/* Share buttons */}
+      <ShareButtons
+        url={`${SITE_URL}/u/${profile.handle}`}
+        text={`${profile.display_name || profile.handle}のMY5をチェック！`}
+      />
+
       <div
         style={{
           textAlign: "center",
-          marginTop: "2.5rem",
+          marginTop: "2rem",
           color: "var(--text-muted)",
           fontSize: "0.8rem",
         }}

@@ -628,3 +628,60 @@ html, body {
   border-color: var(--accent);
   transform: translateY(-1px);
 }
+
+/* ===== Share buttons ===== */
+.share-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+.share-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.share-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--sans);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.share-btn:hover { transform: translateY(-1px); filter: brightness(1.1); }
+.share-btn-x {
+  background: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+.share-btn-x:hover { border-color: #555; }
+.share-btn-line {
+  background: #06C755;
+  color: #fff;
+}
+.share-btn-copy {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+.share-btn-copy:hover { border-color: var(--accent); color: var(--accent); }
+.share-btn-copy.copied {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border-color: var(--accent);
+}
